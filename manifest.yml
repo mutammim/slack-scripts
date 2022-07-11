@@ -1,0 +1,12 @@
+display_information:
+    name: Weather Status
+oauth_config:
+    scopes:
+        user:
+            - users.profile:write
+settings:
+    interactivity:
+        is_enabled: true
+    org_deploy_enabled: false
+    socket_mode_enabled: true
+    token_rotation_enabled: false
