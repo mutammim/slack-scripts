@@ -25,25 +25,24 @@ function setStatus() {
 
 		let emoji; // NOTE: I use the custom Twemoji on my workspace because I prefer the look; remove tw_ to get standard emoji names
 
-		if (weatherCode in [200, 210, 230]) emoji = ":tw_lightning:";
+		if ([200, 210, 230].includes(weatherCode)) emoji = ":tw_lightning:";
 
-		if (weatherCode in [201, 202, 211, 212, 221, 231, 232])
+		if ([201, 202, 211, 212, 221, 231, 232].includes(weatherCode))
 			emoji = ":tw_thunder_cloud_and_rain:";
 
 		if (
-			weatherCode in
 			[
 				300, 301, 302, 310, 311, 312, 313, 314, 321, 500, 501, 502, 503,
 				504, 511, 520, 521, 522, 531,
-			]
+			].includes(weatherCode)
 		)
 			emoji = ":tw_rain_cloud:";
 
 		if (weatherCode.toString()[0] == "6") emoji = ":tw_snow_cloud:";
 
-		if (weatherCode in [701, 741]) emoji = ":tw_fog:";
+		if ([701, 741].includes(weatherCode)) emoji = ":tw_fog:";
 
-		if (weatherCode in [711, 721, 731, 751, 761, 762, 771])
+		if ([711, 721, 731, 751, 761, 762, 771].includes(weatherCode))
 			emoji = ":tw_dash:";
 
 		if (weatherCode == 781) emoji = ":tw_tornado:";
